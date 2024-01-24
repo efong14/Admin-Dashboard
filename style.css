@@ -1,3 +1,13 @@
+:root {
+    --nav-color: #332941;
+    --header-color: ;
+    --input-color: ;
+    --content-color: ;
+    --card-color: ;
+    --side-border-color: ;
+    --banner-color: ;
+}
+
 body {
     display: grid;
     grid-template: 1fr 5fr / 1fr 5fr;
@@ -7,19 +17,18 @@ body {
     margin: 0px;
     border: solid red 1px;
 }
+
 body > div {
     border: solid black 1px;
 }
 
-.header {
-    grid-column: 2 / 3;
-}
-
+/* nav start */
 .navigation {
     grid-row: 1 / 4;
     display: grid;
     grid-template-rows: 20px 220px 100px;
     gap: 20px;
+    background-color: var(--nav-color);
 }
 
 .dashboard, .navGrid {
@@ -36,8 +45,12 @@ body > div {
     grid-auto-rows: 20px;
     font-size: 10px;
 }
+/* nav end */
 
+/* header start */
 .header {
+    grid-column: 2 / 3;
+    background-color: var(--header-color);
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -54,22 +67,43 @@ body > div {
     grid-template-rows: 25px;
 } 
 
+input {
+    background-color: var(--input-color);
+    border-radius: 15px;
+    border-style: hidden;
+}
+
+input:focus {
+    outline: none;
+}
+
 .topWidgets {
     display: flex;
     justify-content: space-around;
 }
-
 
 .greeting {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
+button {
+    background-color: var(--nav-color);
+    font-size: 10px;
+    border-style: hidden;
+    border-radius: 15px;
+    width: 75px;
+    height: 20px;
+}
+/* header end */
+
+/* content start */
 .content {
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr ;
     gap: 10px;
     padding: 20px 15px 30px 10px;
+    background-color: var(--content-color);
 }
 
 .projects {
@@ -78,8 +112,8 @@ body > div {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15px repeat(3, 1fr);
     gap: 10px;
+    color: white;
     font-size: 10px;
-    border: solid blue 1px;
 }
 
 .title {
@@ -89,7 +123,9 @@ body > div {
 }
 
 .card {
-    border: solid blue 1px;
+    background-color: var(--card-color);
+    border-left: #F8E559 solid 5px;
+    border-radius: 5px;
 }
 
 .announcements {
@@ -101,9 +137,19 @@ body > div {
 
 .announcements > .banner {
     padding: 10px;
+    background-color: var(--banner-color);
 }
 
 .trending {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 20px 1fr;
     border: solid blue 1px;
 }
+
+.trending > .banner {
+    padding: 10px 15px 10px 10px;
+    font-size: 10px;
+    background-color: var(--banner-color);
+}
+/* content end */
