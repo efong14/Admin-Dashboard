@@ -1,11 +1,11 @@
 :root {
-    --nav-color: #332941;
-    --header-color: ;
-    --input-color: ;
-    --content-color: ;
-    --card-color: ;
-    --side-border-color: ;
-    --banner-color: ;
+    --nav-color: #F99417;
+    --header-color: #151515;
+    --input-color: whitesmoke;
+    --content-color: #343A40;
+    --card-color: #151515;
+    --side-border-color: #CF7500;
+    --banner-color: #151515;
 }
 
 body {
@@ -15,11 +15,8 @@ body {
     width: 100vw;
     padding: 0px;
     margin: 0px;
-    border: solid red 1px;
-}
-
-body > div {
-    border: solid black 1px;
+    color: white;
+    background-color: var(--content-color);
 }
 
 /* nav start */
@@ -29,6 +26,7 @@ body > div {
     grid-template-rows: 20px 220px 100px;
     gap: 20px;
     background-color: var(--nav-color);
+    color: black;
 }
 
 .dashboard, .navGrid {
@@ -54,6 +52,7 @@ body > div {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.33) inset;
 }
 
 .header > div {
@@ -104,6 +103,7 @@ button {
     gap: 10px;
     padding: 20px 15px 30px 10px;
     background-color: var(--content-color);
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.33) inset;
 }
 
 .projects {
@@ -124,8 +124,10 @@ button {
 
 .card {
     background-color: var(--card-color);
-    border-left: #F8E559 solid 5px;
+    border-left: var(--side-border-color) solid 5px;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
+    /* color: black; */
 }
 
 .announcements {
@@ -138,6 +140,8 @@ button {
 .announcements > .banner {
     padding: 10px;
     background-color: var(--banner-color);
+    box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
+    border-radius: 5px;
 }
 
 .trending {
@@ -151,5 +155,7 @@ button {
     padding: 10px 15px 10px 10px;
     font-size: 10px;
     background-color: var(--banner-color);
+    box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
+    border-radius: 5px;
 }
 /* content end */
