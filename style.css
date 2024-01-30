@@ -8,11 +8,17 @@
     --banner-color: #151515;
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(/Roboto-Regular.ttf);
+}
+
 body {
     display: grid;
     grid-template: 1fr 5fr / 1fr 5fr;
     height: 100vh;
-    width: 100vw;
+    width: fit-content;
+    font-family: roboto;
     padding: 0px;
     margin: 0px;
     color: white;
@@ -20,6 +26,8 @@ body {
 }
 
 .profilePic {
+    height: 20px;
+    width: 20px;
     padding: 2px;
     border-radius: 100%;
 }
@@ -63,7 +71,7 @@ input:focus {
 
 .input > img {
     height: 20px;
-    width: 20px ;
+    width: 20px;
     filter: invert(100%);
     justify-self: end;
 }
@@ -152,7 +160,7 @@ button {
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr ;
     gap: 10px;
-    padding: 20px 30px 30px 10px;
+    padding: 20px 0px 30px 10px;
     background-color: var(--content-color);
     box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.33) inset;
 }
@@ -163,8 +171,8 @@ button {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20px repeat(3, 1fr);
     gap: 10px;
+    margin-right: 10px;
     color: white;
-    font-size: 10px;
 }
 
 .title {
@@ -180,19 +188,45 @@ button {
     border-radius: 5px;
     box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
     padding: 15px 10px 15px 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.cardText > div {
+    font-size: 8px;
+    font-weight: lighter;
+    color: grey;
+}
+
+.cardIcons {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .card > div > img {
     height: 15px;
     width: 15px;
+    padding: 5px;
+}
+
+.banner {
+    width: 175px;
+    height: 200px;
+}
+
+.banner > div {
+    margin: 10px 10px;
 }
 
 .announcements {
     grid-column: 2 / 3;
-    display: grid;
-    grid-template-rows: 20px 1fr;
     font-size: 20px;
-    border: solid blue 1px;
+    margin-bottom: 10px;
+}
+
+.bannerTitle {
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
 .announcements > .banner {
@@ -200,21 +234,53 @@ button {
     background-color: var(--banner-color);
     box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
     border-radius: 5px;
+    font-size: 10px;
+}
+
+.borderedBanner {
+    padding: 5px 0;
+    border-top: solid grey 1px;
+    border-bottom: solid grey 1px;
+}
+
+.bannerText {
+    font-size: 7px;
+    color: grey;
 }
 
 .trending {
     grid-column: 2 / 3;
-    display: grid;
-    grid-template-rows: 20px 1fr;
     font-size: 20px;
-    border: solid blue 1px;
 }
 
 .trending > .banner {
-    padding: 10px 15px 10px 10px;
+    height: 200px;
+    padding: 10px;
     font-size: 10px;
     background-color: var(--banner-color);
     box-shadow: 5px 5px 5px 0 rgba(5, 0, 0, 0.33);
     border-radius: 5px;
+}
+
+.trendingContent {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    gap: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+.tegan {
+    background-color: red;
+}
+.kendall {
+    background-color: #6962AD;
+}
+.alex {
+    background-color: #83C0C1;
+}
+
+.trendingContent > div:nth-child(3) {
+    color: grey;
 }
 /* content end */
